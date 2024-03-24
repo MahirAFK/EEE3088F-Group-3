@@ -1,0 +1,32 @@
+*
+
+.subckt test
+
+
+Q2 __Q2
+R5 /Middle_input Net-_Q2-B_ 100
+Q3 __Q3
+R7 /Right_input Net-_Q3-B_ 100
+U3 __U3
+U1 __U1
+R4 /Left_input Net-_Q1-B_ 100
+U2 __U2
+Q1 __Q1
+R9 Net-_CGQ1-E_ GND 100
+R2 Net-_CGQ2-E_ GND 100
+C3 Net-_CGQ3-E_ /Right_output 100n
+R10 Net-_CGQ3-E_ GND 100
+CGQ3 Net-_CGQ3-E_ /Batt PT333-3B_C5134
+TP3 __TP3
+TP1 __TP1
+CGQ2 Net-_CGQ2-E_ /Batt PT333-3B_C5134
+TP2 __TP2
+C2 Net-_CGQ2-E_ /Middle_output 100n
+CGQ1 Net-_CGQ1-E_ /Batt PT333-3B_C5134
+C1 Net-_CGQ1-E_ /Left_output 100n
+R6 /Batt Net-_U3-A_ 22
+R1 /Batt Net-_U1-A_ 22
+R3 /Batt Net-_U2-A_ 22
+J1 __J1
+
+.ends
